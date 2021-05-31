@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Dancing Script', cursive, 'Shippori Mincho B1', serif;
+}
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+    margin:0 auto;
+}
+
+.slider img {
+    width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height:auto;
+}
+
+.slider .slick-slide {
+	transform: scale(0.8);/*左右の画像のサイズを80%に*/
+	transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+	opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+	transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+	opacity: 1;/*透過なし*/
+}
+
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+	margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+/* --------------------------------------------------------------------------------
+Tabのレイアウト
+-------------------------------------------------------------------------------- */
+/*tabの形状*/
+.tab{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+
+/*エリアの表示非表示と形状*/
+.area {
+	display: none;/*はじめは非表示*/
+	opacity: 0;/*透過0*/
+	background: #fff;
+	padding:50px 20px;
+}
+
+/*areaにis-activeというクラスがついた時の形状*/
+.area.is-active {
+    display: block;/*表示*/
+    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+	background:radial-gradient(#b5f0f0, #ffffff);
+}
+
+h2,p {
+    text-align:center;
+    padding:10px;
+}
+
+ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+
+a{
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover,
+a:active{
+	text-decoration: none;
+}
+
+
+.wrapper{
+	width:100%;
+	max-width: 960px;
+	margin:30px auto;
+    background:#fefefe;
+}
+
+.area h2{
+	font-size:1.3rem;
+	margin:0 0 20px 10px;
+}
+
+.area li{
+	padding: 10px; 
+}
+
+
+.heading {
+    font-size:25px;
+}
+
+.heading2 {
+    font-size:20px;
+}
+
+.three-big {
+    font-size:35px;
+    color:rgb(255, 118, 141);
+}
+
+.heading2-omote {
+    font-size:35px;
+    color:rgb(255, 118, 141);
+}
+
+.heading2-clinic {
+    font-size:19px;
+}

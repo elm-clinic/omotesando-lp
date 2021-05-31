@@ -1,0 +1,42 @@
+.area1 {
+  background-color: rgba(208, 188, 204, 0.3);
+}
+
+.tab li .tab1{
+	display: block;
+	background:rgba(208, 188, 204, 0.45);
+	margin:0 2px;
+	padding:10px 20px;
+}
+
+/*liにactiveクラスがついた時の形状*/
+.tab li .active .tab1{
+	background:#d0bccc;
+}
+
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider_menu {/*横幅94%で左右に余白を持たせて中央寄せ*/
+	width:94%;
+	margin:0 auto;
+}
+
+.slider_menu img {
+	width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+	height:auto;
+}
+
+.slider_menu .slick-slide {
+transform: scale(0.8);/*左右の画像のサイズを80%に*/
+transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+opacity: 0.5;/*透過50%*/
+}
+
+.slider_menu .slick-slide.slick-center{
+transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+opacity: 1;/*透過なし*/
+}
+
+
